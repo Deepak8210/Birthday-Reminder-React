@@ -1,0 +1,70 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.errormodal-container {
+  font-family: "DM Serif Display", serif;
+  border: 2px solid white;
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 35%;
+  height: 10rem;
+  position: absolute;
+  top: 12rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  z-index: 15;
+  color: aliceblue;
+  backdrop-filter: blur(25px);
+}
+.error-title {
+  background-color: #4f005f;
+  border-radius: 8px 8px 0px 0px;
+  padding: 0.3rem;
+  text-align: left;
+}
+.error-title h2 {
+  margin-left: 0.2rem;
+  color: aliceblue;
+}
+.error-content {
+  display: flex;
+  justify-content: left;
+  margin: 1rem 0.8rem;
+}
+.error-action {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex: 1;
+}
+.error-btn {
+  display: flex;
+  width: fit-content;
+  margin: 0.5rem;
+  padding: 0.3rem 0.7rem;
+  font-weight: 700;
+  border-radius: 3px;
+  background-color: #4f005f;
+  color: aliceblue;
+  border: 2px solid #42004f;
+}
+.error-btn:hover,
+.btn:active {
+  background-color: rgba(79, 0, 95, 0.5);
+  border: 2px solid #4f005f;
+  cursor: pointer;
+}
+
+/*media queries*/
+@media only screen and (max-width: 450px) {
+  .errormodal-container {
+    width: 60%;
+  }
+}
